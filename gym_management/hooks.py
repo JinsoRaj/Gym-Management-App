@@ -188,3 +188,7 @@ user_data_fields = [
 #	"gym_management.auth.validate"
 # ]
 
+# Website route rules
+website_route_rules = [
+ {"from_route": "/undefined", "to_route": "404"}
+  ]

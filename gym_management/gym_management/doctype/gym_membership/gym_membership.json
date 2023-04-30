@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-25 15:27:54.850578",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member_name",
+  "gym_plan_section",
+  "plan_name",
+  "plan_expiry_date",
+  "column_break_ecexp",
+  "plan_fee",
+  "total_gym_fee",
+  "trainer_subscription_section",
+  "trainer",
+  "column_break_p0dh2",
+  "trainer_fee",
+  "cardio_section",
+  "cardio",
+  "column_break_zb5pk",
+  "cardio_fee",
+  "locker_facility_section",
+  "locker",
+  "column_break_6dzhw",
+  "locker_fee",
+  "final_amount_section",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "options": "Gym Workout Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer Subscription"
+  },
+  {
+   "fieldname": "plan_expiry_date",
+   "fieldtype": "Date",
+   "label": "Plan Expiry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "locker",
+   "fieldtype": "Link",
+   "label": "Locker",
+   "options": "Gym Locker Booking"
+  },
+  {
+   "default": "No",
+   "fieldname": "cardio",
+   "fieldtype": "Select",
+   "label": "Cardio",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "trainer_subscription_section",
+   "fieldtype": "Section Break",
+   "label": "Trainer Subscription"
+  },
+  {
+   "fieldname": "cardio_section",
+   "fieldtype": "Section Break",
+   "label": "Cardio"
+  },
+  {
+   "fieldname": "locker_facility_section",
+   "fieldtype": "Section Break",
+   "label": "Locker Facility"
+  },
+  {
+   "fieldname": "final_amount_section",
+   "fieldtype": "Section Break",
+   "label": "Final Amount"
+  },
+  {
+   "fetch_from": "plan_name.day_fee",
+   "fieldname": "plan_fee",
+   "fieldtype": "Currency",
+   "label": "Plan Basic Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ecexp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_gym_fee",
+   "fieldtype": "Currency",
+   "label": "Total Gym Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_p0dh2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trainer.fee_month",
+   "fieldname": "trainer_fee",
+   "fieldtype": "Currency",
+   "label": "Trainer Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zb5pk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cardio_fee",
+   "fieldtype": "Currency",
+   "label": "Cardio Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6dzhw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "locker_fee",
+   "fieldtype": "Read Only",
+   "label": "Locker Fee"
+  },
+  {
+   "fieldname": "gym_plan_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Plan"
+  },
+  {
+   "fieldname": "gym_member_name",
+   "fieldtype": "Link",
+   "label": "Gym Member Name",
+   "options": "Gym Member"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-01 01:20:04.001458",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Membership",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
