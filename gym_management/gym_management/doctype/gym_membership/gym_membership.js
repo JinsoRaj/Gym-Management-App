@@ -55,5 +55,18 @@ frappe.ui.form.on('Gym Membership', {
 
 			}
 		})
-	}
+	},
+	cardio_fee: (frm) => {
+        calculate_total(frm);
+    }
 })
+
+let calculate_total = frm => {
+    let plan = frm.doc.total_gym_fee,
+    	cardio = frm.doc.cardio_fee,
+		trainer= frm.doc.trainer_fee,
+		locker=frm.doc.locker_fee
+		total = plan + cardio + trainer + locker
+    frm.set_value("total_amount", total);
+    frm.refresh_field("total_amount");
+}
