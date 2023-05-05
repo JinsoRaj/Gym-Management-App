@@ -45,7 +45,7 @@ frappe.ui.form.on("Gym Membership", "onload", function(frm) {
 frappe.ui.form.on('Gym Membership', {
 	before_submit: frm => {
 		frappe.call({
-			method: 'gym_management_system.services.rest.create_revenue_report',
+			method: 'gym_management.services.rest.create_revenue_report',
 			args: {
 				'customer' : frm.doc.gym_member_name,
 				'plan' : frm.doc.plan_name,

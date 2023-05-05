@@ -21,5 +21,5 @@ class GymMembership(Document):
             "valid_upto": self.plan_expiry_date
             })
 
-            gym_locker_booking.insert().submit()
+            gym_locker_booking.insert()
             frappe.db.commit()
