@@ -9,7 +9,9 @@
  "field_order": [
   "plan_name",
   "day_fee",
-  "route"
+  "route",
+  "exercises",
+  "published"
  ],
  "fields": [
   {
@@ -26,12 +28,23 @@
    "fieldname": "day_fee",
    "fieldtype": "Data",
    "label": "Per Day Fee"
+  },
+  {
+   "fieldname": "exercises",
+   "fieldtype": "Table",
+   "label": "Exercises",
+   "options": "Gym Workout Plan Exercise"
+  },
+  {
+   "fieldname": "published",
+   "fieldtype": "Data",
+   "label": "Published"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-30 12:34:15.736777",
+ "modified": "2023-05-05 23:14:07.958961",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Workout Plan",

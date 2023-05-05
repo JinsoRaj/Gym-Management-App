@@ -1,34 +1,46 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-04-27 12:01:29.751628",
+ "creation": "2023-05-05 21:33:17.019340",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "class",
-  "no_of_bookings"
+  "gym_member",
+  "weight",
+  "daily_calorie",
+  "date"
  ],
  "fields": [
   {
-   "fieldname": "class",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Class Name",
-   "reqd": 1
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
   },
   {
-   "fieldname": "no_of_bookings",
-   "fieldtype": "Int",
-   "label": "No: of Bookings"
+   "fieldname": "daily_calorie",
+   "fieldtype": "Data",
+   "label": "Daily Calorie Intake"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-05 23:01:44.306455",
+ "modified": "2023-05-05 22:59:17.873734",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Class",
+ "name": "Measurements",
  "owner": "Administrator",
  "permissions": [
   {

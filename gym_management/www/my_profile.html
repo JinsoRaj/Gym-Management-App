@@ -1,0 +1,26 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<h1>Member Profile</h1>
+
+<div class="text-left mt-5">
+        
+    {% if data is iterable and (data is not string and data is not mapping) %}
+        <h3>Plan Details:</h3>
+        
+        <ul class="text-lg-left">
+            <li>Active Plan: {{ data[0] }}</li>
+            <li>Remaining days in subscription: {{ data[1] }}</li>
+            <li>Your trainer: {{ data[2] }}</li>
+        </ul>
+    {% else %}
+        <p>{{data}}</p>
+    {% endif %}
+    
+</div>
+
+<a href="#" class="btn btn-primary text-center">Choose Plan</a>
+
+
+<!-- {% endblock %} -->

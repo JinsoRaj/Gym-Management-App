@@ -1,38 +1,46 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{locker_name}",
- "creation": "2023-04-29 14:52:41.611083",
+ "creation": "2023-05-05 23:21:18.569780",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "locker_name",
-  "status"
+  "date",
+  "customer",
+  "plan_name",
+  "total_amount"
  ],
  "fields": [
   {
-   "fieldname": "locker_name",
-   "fieldtype": "Link",
-   "label": "Locker Name",
-   "options": "Gym Locker"
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Free\nTaken",
-   "read_only": 1
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Gym Member"
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Link",
+   "label": "Plan Name",
+   "options": "Gym Workout Plan"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-05 22:25:31.786453",
+ "modified": "2023-05-05 23:21:18.569780",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Locker",
+ "name": "Gym Invoice",
  "owner": "Administrator",
  "permissions": [
   {

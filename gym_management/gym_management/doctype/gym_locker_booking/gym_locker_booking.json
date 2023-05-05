@@ -1,41 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{locker_number}",
  "creation": "2023-04-27 10:24:31.836553",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "member_name",
   "locker_number",
+  "assigned_to",
   "valid_upto",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "member_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Member Name",
-   "reqd": 1
-  },
-  {
    "fieldname": "locker_number",
-   "fieldtype": "Data",
-   "in_list_view": 1,
+   "fieldtype": "Link",
    "label": "Locker",
-   "reqd": 1
+   "options": "Gym Locker"
   },
   {
    "fieldname": "valid_upto",
-   "fieldtype": "Read Only",
-   "label": "Valid Upto"
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Valid Upto",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "Gym Member"
   },
   {
    "fieldname": "amended_from",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
+   "options": "Gym Locker Booking",
    "print_hide": 1,
    "read_only": 1
   }
@@ -43,7 +45,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-29 15:32:48.308567",
+ "modified": "2023-05-05 23:55:52.535945",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Locker Booking",

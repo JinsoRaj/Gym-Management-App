@@ -26,7 +26,8 @@
   "column_break_6dzhw",
   "locker_fee",
   "final_amount_section",
-  "total_amount"
+  "total_amount",
+  "amended_from"
  ],
  "fields": [
   {
@@ -53,7 +54,7 @@
    "fieldname": "locker",
    "fieldtype": "Link",
    "label": "Locker",
-   "options": "Gym Locker Booking"
+   "options": "Gym Locker"
   },
   {
    "default": "No",
@@ -146,11 +147,21 @@
    "fieldtype": "Link",
    "label": "Gym Member Name",
    "options": "Gym Member"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-05-01 01:20:04.001458",
+ "modified": "2023-05-05 23:40:06.276653",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",

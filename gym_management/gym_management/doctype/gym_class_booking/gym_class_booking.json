@@ -6,9 +6,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "user",
   "class_name",
-  "schedule",
-  "class_free"
+  "class_date"
  ],
  "fields": [
   {
@@ -18,20 +18,20 @@
    "options": "Gym Class"
   },
   {
-   "fieldname": "schedule",
-   "fieldtype": "Read Only",
-   "label": "Schedule"
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "Gym Member"
   },
   {
-   "fieldname": "class_free",
-   "fieldtype": "Read Only",
-   "in_list_view": 1,
-   "label": "Fee"
+   "fieldname": "class_date",
+   "fieldtype": "Date",
+   "label": "Class Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-27 12:02:23.780600",
+ "modified": "2023-05-05 23:06:22.382948",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Class Booking",
