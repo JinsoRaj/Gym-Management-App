@@ -11,7 +11,7 @@ class GymMembership(Document):
             frappe.db.set_value("Gym Locker", self.locker, "status", "Taken")  
             frappe.db.commit()
         			
-    def on_update(self):
+    def before_submit(self):
         if self.locker != '' :
             
             gym_locker_booking= frappe.get_doc({

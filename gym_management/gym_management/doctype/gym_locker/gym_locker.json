@@ -22,13 +22,12 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Free\nTaken",
-   "read_only": 1
+   "options": "Free\nTaken"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-06 00:45:20.279960",
+ "modified": "2023-05-08 01:02:05.601758",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Locker",

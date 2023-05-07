@@ -15,6 +15,7 @@ frappe.ui.form.on('Gym Membership', 'plan_expiry_date', (frm, cdt, cdn) => {
 	frm.doc.total_gym_fee = days_difference * frm.doc.plan_fee
 	frm.refresh_field("total_gym_fee")
 	//console.log(frm);
+	calculate_total(frm);
 });
 
 frappe.ui.form.on('Gym Membership', 'cardio', (frm, cdt, cdn) => {
@@ -41,6 +42,17 @@ frappe.ui.form.on("Gym Membership", "onload", function(frm) {
     });
 });
 
+// calculate total amount on each field change
+
+let calculate_total = frm => {
+    let plan = frm.doc.total_gym_fee,
+    	cardio = frm.doc.cardio_fee,
+		trainer= frm.doc.trainer_fee,
+		locker= frm.doc.locker_fee,
+		total = plan + cardio + trainer + locker
+    frm.set_value("total_amount", total);
+    frm.refresh_field("total_amount");
+}
 
 frappe.ui.form.on('Gym Membership', {
 	before_submit: frm => {
@@ -56,17 +68,14 @@ frappe.ui.form.on('Gym Membership', {
 			}
 		})
 	},
-	cardio_fee: (frm) => {
+	cardio: (frm) => {
         calculate_total(frm);
-    }
+    },
+	trainer: (frm) => {
+		calculate_total(frm);
+	},
+	locker: (frm) => {
+		calculate_total(frm);
+	}
 })
 
-let calculate_total = frm => {
-    let plan = frm.doc.total_gym_fee,
-    	cardio = frm.doc.cardio_fee,
-		trainer= frm.doc.trainer_fee,
-		locker=frm.doc.locker_fee
-		total = plan + cardio + trainer + locker
-    frm.set_value("total_amount", total);
-    frm.refresh_field("total_amount");
-}
