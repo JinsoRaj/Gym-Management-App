@@ -6,3 +6,9 @@ frappe.ui.form.on('Gym Class Booking', {
 
 	// }
 });
+
+frappe.ui.form.on('Gym Class Booking', 'class', (frm, cdt, cdn) => {
+	let selectedRow = locals[cdt][cdn]
+	selectedRow.user = frappe.session.user
+	frm.refresh_field("user")
+});

@@ -13,6 +13,7 @@
  ],
  "fields": [
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -37,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-05 23:21:18.569780",
+ "modified": "2023-05-15 20:09:18.959600",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Invoice",

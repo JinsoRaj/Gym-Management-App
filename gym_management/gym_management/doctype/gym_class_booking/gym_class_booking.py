@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 class GymClassBooking(Document):
     def on_update(self):
-        doc_name = self.choose_class
+        doc_name = self.class_name
         doc = frappe.get_doc("Gym Class", doc_name)
         doc.no_of_bookings += 1
         doc.save()

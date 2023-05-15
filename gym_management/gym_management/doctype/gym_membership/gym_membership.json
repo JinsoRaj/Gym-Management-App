@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{email}",
  "creation": "2023-04-25 15:27:54.850578",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -27,7 +28,8 @@
   "locker_fee",
   "final_amount_section",
   "total_amount",
-  "amended_from"
+  "amended_from",
+  "email"
  ],
  "fields": [
   {
@@ -54,7 +56,8 @@
    "fieldname": "locker",
    "fieldtype": "Link",
    "label": "Locker",
-   "options": "Gym Locker"
+   "options": "Gym Locker",
+   "reqd": 1
   },
   {
    "default": "No",
@@ -133,9 +136,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "20",
    "fieldname": "locker_fee",
-   "fieldtype": "Read Only",
-   "label": "Locker Fee"
+   "fieldtype": "Currency",
+   "label": "Locker Fee",
+   "read_only": 1
   },
   {
    "fieldname": "gym_plan_section",
@@ -156,12 +161,18 @@
    "options": "Gym Membership",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "gym_member_name.user_mail",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-05-05 23:40:06.276653",
+ "modified": "2023-05-15 20:42:03.830413",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",

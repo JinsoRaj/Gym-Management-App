@@ -4,6 +4,18 @@
 
 frappe.query_reports["Revenue Report"] = {
 	"filters": [
+		{
+			"fieldname": "from",
+			"label": "From Date",
+			"fieldtype": "Date",
+			"width": 200
+		},
+		{
+			"fieldname": "to",
+			"label": "To Date",
+			"fieldtype": "Date",
+			"width": 200
+		}
 
 	]
 };

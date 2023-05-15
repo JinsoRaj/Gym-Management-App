@@ -19,5 +19,5 @@ def get_context(context):
             context.data = "You have no active plans"
     else:
         frappe.throw( ("You have to login as a member access this page"), frappe.PermissionError)
-   
+
     return context

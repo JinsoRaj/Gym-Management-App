@@ -8,5 +8,6 @@ class TestMeasurements(unittest.TestCase):
 	def test_measurements(self):
 		test_entry = frappe.get_doc({
 			"doctype": "Measurements",
-			"date": "New Date"
+			"weight": "123"
 		}).insert()
+ 
